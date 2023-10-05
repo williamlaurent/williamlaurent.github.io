@@ -76,28 +76,29 @@
     </style>
 </head>
 <body>
-    <h1 id="typing-text"></h1>
+    <h2 id="typing-text"></h2>
 
     <script>
-        // Teks yang akan dijalankan seperti mengetik
-        var textToType = "I will put some stuff soon! <br> @willmet";
-        var typingSpeed = 50; // Kecepatan mengetik (dalam milidetik)
+    // Teks yang akan dijalankan seperti mengetik
+    var textToType = "I will put some stuff soon! @willmet";
+    var typingSpeed = 50; // Kecepatan mengetik (dalam milidetik)
 
-        var index = 0;
-        var typingContainer = document.getElementById("typing-text");
+    var index = 0;
+    var typingContainer = document.getElementById("typing-text");
 
-        function typeText() {
-            if (index < textToType.length) {
-                typingContainer.innerHTML += textToType.charAt(index);
-                index++;
-                setTimeout(typeText, typingSpeed);
-            }
+    function typeText() {
+        if (index < textToType.length) {
+            typingContainer.innerHTML += textToType.charAt(index);
+            index++;
+            setTimeout(typeText, typingSpeed);
         }
+    }
 
-        // Memulai efek mengetik ketika halaman dimuat
-        window.onload = function () {
-            typeText();
-        };
-    </script>
+    // Memulai efek mengetik ketika halaman dimuat
+    window.onload = function () {
+        typeText();
+    };
+</script>
+
 </body>
 </html>
