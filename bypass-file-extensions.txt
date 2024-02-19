@@ -1,4 +1,3 @@
-<pre>
 Bypass Backdoor Extension For PHP
 .php | .phar | .phps | .php1 | .php2 | .php3 | .php4 | .php5 | .php6 | .php7 | .php56
 .pht | .phtm | .phtml | .pHP | .pHp | .php.jpg | .php.pjpeg | .php.jpeg | .inc
@@ -28,4 +27,3 @@ Erlang Yaws Web Server
 
 More?
 https://book.hacktricks.xyz/pentesting-web/file-upload
-</pre>
