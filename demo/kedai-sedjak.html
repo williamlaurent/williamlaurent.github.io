@@ -17,18 +17,27 @@
             color: #ffffff; /* Teks berwarna putih */
             border-bottom: 5px solid #ffffff; /* Garis bawah putih */
         }
-        nav {
-            background-color: #ffcccc; /* Latar belakang merah muda */
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #ff0000; /* Teks berwarna merah */
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Comic Sans MS', cursive; /* Font Comic Sans MS */
-        }
+        /* Tampilan desktop */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 0 15px;
+}
+
+/* Tampilan mobile */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
         .content {
             display: flex;
             justify-content: center;
@@ -75,7 +84,8 @@
         <h1>Selamat Datang di Kedai Sedjak 2019</h1>
     </header>
     <nav>
-        <a href="#">Home</a>
+        <a href="#"><img src="navbar.png" alt="Coffee Icon">Home</a>
+        <!--<a href="#">Home</a>-->
         <a href="#menu">Menu</a>
         <a href="#tentang">Tentang Kami</a>
         <a href="#">Kontak</a>
