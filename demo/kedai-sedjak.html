@@ -31,6 +31,8 @@
         .content {
             display: flex;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin: 20px;
         }
         .content table {
@@ -41,6 +43,14 @@
         .content td, .content th {
             border: 2px solid #ff0000; /* Border merah */
             padding: 10px;
+        }
+        .about-us {
+            background-color: #ffe6e6; /* Latar belakang merah muda */
+            padding: 20px;
+            border: 2px solid #ff0000; /* Border merah */
+            margin-top: 20px;
+            width: 60%;
+            text-align: center;
         }
         footer {
             text-align: center;
@@ -63,11 +73,11 @@
     </header>
     <nav>
         <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang-kami">Tentang Kami</a>
         <a href="#">Kontak</a>
     </nav>
-    <div class="content">
+    <div class="menu">
         <table>
             <tr>
                 <th>Menu</th>
@@ -86,6 +96,9 @@
                 <td>Rp 20,000</td>
             </tr>
         </table>
+        <div class="tentang-kami">
+            <p><a href="https://www.tampanongki.biz.id/2024/03/kedai-sedjak-2019-tempat-ngopi-di-manado.html">Kedai Sedjak</a> 2019 satu-satunya tempat nongkrong bernuansa dan berkonsep tempo doeloe, berbeda dari kebanyakan kafe yang menjamur di Manado. Siapa sangka jika, kedai ini dulunya merupakan tempat tukang gigi dan studio foto bernama Kiau Eek 僑益 di tahun 1950-an, milik Buyut dan Akong pemilik kedai saat ini.</p>
+        </div>
     </div>
     <footer>
         <p>&copy; 2019 Kedai Sedjak 2019</p>
