@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Linux Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        table th {
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Linux Commands</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>ls</code></td>
+                    <td>List files and directories in the current directory.</td>
+                    <td><code>ls -l</code></td>
+                </tr>
+                <tr>
+                    <td><code>cd</code></td>
+                    <td>Change directory.</td>
+                    <td><code>cd /home/user</code></td>
+                </tr>
+                <tr>
+                    <td><code>pwd</code></td>
+                    <td>Display the current directory.</td>
+                    <td><code>pwd</code></td>
+                </tr>
+                <tr>
+                    <td><code>mkdir</code></td>
+                    <td>Create a new directory.</td>
+                    <td><code>mkdir myfolder</code></td>
+                </tr>
+                <tr>
+                    <td><code>rmdir</code></td>
+                    <td>Remove an empty directory.</td>
+                    <td><code>rmdir myfolder</code></td>
+                </tr>
+                <tr>
+                    <td><code>rm</code></td>
+                    <td>Remove a file or directory.</td>
+                    <td><code>rm -r myfolder</code></td>
+                </tr>
+                <tr>
+                    <td><code>cp</code></td>
+                    <td>Copy files or directories.</td>
+                    <td><code>cp file.txt /backup/</code></td>
+                </tr>
+                <tr>
+                    <td><code>mv</code></td>
+                    <td>Move or rename files.</td>
+                    <td><code>mv oldname.txt newname.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>cat</code></td>
+                    <td>View the contents of a file.</td>
+                    <td><code>cat file.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>nano</code> / <code>vi</code></td>
+                    <td>Edit a file in the terminal.</td>
+                    <td><code>nano file.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>touch</code></td>
+                    <td>Create a new empty file.</td>
+                    <td><code>touch newfile.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>whoami</code></td>
+                    <td>Show the current logged-in user.</td>
+                    <td><code>whoami</code></td>
+                </tr>
+                <tr>
+                    <td><code>id</code></td>
+                    <td>Display user ID information.</td>
+                    <td><code>id user</code></td>
+                </tr>
+                <tr>
+                    <td><code>adduser</code></td>
+                    <td>Add a new user.</td>
+                    <td><code>adduser john</code></td>
+                </tr>
+                <tr>
+                    <td><code>passwd</code></td>
+                    <td>Change a user's password.</td>
+                    <td><code>passwd john</code></td>
+                </tr>
+                <tr>
+                    <td><code>dnf update</code></td>
+                    <td>Update all system packages.</td>
+                    <td><code>dnf update</code></td>
+                </tr>
+                <tr>
+                    <td><code>dnf remove</code></td>
+                    <td>Remove a package.</td>
+                    <td><code>dnf remove nano</code></td>
+                </tr>
+                <tr>
+                    <td><code>df -h</code></td>
+                    <td>Display disk usage in human-readable format.</td>
+                    <td><code>df -h</code></td>
+                </tr>
+                <tr>
+                    <td><code>free -h</code></td>
+                    <td>Display memory usage.</td>
+                    <td><code>free -h</code></td>
+                </tr>
+                <tr>
+                    <td><code>ping</code></td>
+                    <td>Test network connectivity to a host.</td>
+                    <td><code>ping google.com</code></td>
+                </tr>
+                <tr>
+                    <td><code>ifconfig</code> / <code>ip addr</code></td>
+                    <td>Show network interface information.</td>
+                    <td><code>ifconfig</code></td>
+                </tr>
+                <tr>
+                    <td><code>top</code></td>
+                    <td>Display running processes in real-time.</td>
+                    <td><code>top</code></td>
+                </tr>
+                <tr>
+                    <td><code>htop</code></td>
+                    <td>Interactive process viewer (needs installation).</td>
+                    <td><code>htop</code></td>
+                </tr>
+                <tr>
+                    <td><code>tail</code></td>
+                    <td>View the last lines of a file.</td>
+                    <td><code>tail -f /var/log/messages</code></td>
+                </tr>
+                <tr>
+                    <td><code>chmod</code></td>
+                    <td>Change file permissions.</td>
+                    <td><code>chmod 755 script.sh</code></td>
+                </tr>
+                <tr>
+                    <td><code>chown</code></td>
+                    <td>Change file ownership.</td>
+                    <td><code>chown user:group file.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>curl</code></td>
+                    <td>Transfer data from or to a server.</td>
+                    <td><code>curl http://example.com</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
