@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Training Roadmap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        ul {
+            list-style-type: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .challenge {
+            background: #eef;
+            border-left: 4px solid #007BFF;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OSINT Training Roadmap</h1>
+        <p>Master Open Source Intelligence from Basics to Advanced</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>1. Pengantar OSINT dan Etika</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Apa itu OSINT?</li>
+                <li>Pentingnya OSINT di berbagai bidang.</li>
+                <li>Hukum, etika, dan batasan dalam OSINT.</li>
+                <li>Memahami ancaman privasi dan keamanan.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Berikan contoh kasus (misalnya, penyelidikan publik pada organisasi non-profit). Minta mereka membuat laporan sederhana dengan batasan etika yang ditetapkan.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Tools dan Framework Dasar OSINT</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Perkenalan tools dasar: Google Dorking, Maltego, dan OSINT Framework.</li>
+                <li>Dasar-dasar Google Dorking: operator pencarian, filter pencarian, dll.</li>
+                <li>Memahami OSINT Framework dan struktur pencarian.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Berikan target spesifik (misalnya, menemukan informasi publik tentang domain tertentu). Mereka harus menggunakan Google Dorking untuk mengumpulkan data.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Pencarian Informasi dari Media Sosial</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Menggunakan media sosial untuk OSINT: Twitter, Facebook, Instagram, LinkedIn.</li>
+                <li>Tools seperti Social-Searcher, Twint, dan Followerwonk.</li>
+                <li>Identifikasi pola, hubungan, dan aktivitas melalui media sosial.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Cari profil publik seseorang di media sosial dan buat laporan singkat tentang pola aktivitas, interaksi, dan posting mereka. (Etika tetap dijaga.)</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Pemanfaatan Data Publik dan Database Online</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Cara menggunakan WHOIS, Shodan, dan Censys.</li>
+                <li>Pemanfaatan dokumen publik (PDF, Excel, dll).</li>
+                <li>Pemahaman metadata dari file digital.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Temukan informasi dasar tentang domain atau server tertentu menggunakan WHOIS dan Shodan. Laporkan temuan terkait.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Pemetaan dan Geolokasi</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Pengenalan geolokasi dengan Google Earth dan OpenStreetMap.</li>
+                <li>Analisis metadata gambar untuk lokasi (Exiftool).</li>
+                <li>Menggunakan tools seperti Geotagging Viewer.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Berikan gambar dengan metadata aktif, minta mereka mengidentifikasi lokasi gambar dan membuat laporan.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Analisis Jejak Digital dan Profiling</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Membaca jejak digital seseorang.</li>
+                <li>Memahami teknik rekonstruksi profil individu atau organisasi.</li>
+                <li>Tools tambahan seperti SpiderFoot atau Recon-ng.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Buat profil lengkap seseorang dari data yang tersedia secara publik (tanpa melanggar batas etika atau hukum).</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>7. OSINT Lanjutan: Automasi dan Scripting</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Automasi dengan Python: Scrapy, Beautiful Soup.</li>
+                <li>Memahami API dari platform OSINT.</li>
+                <li>Membuat script sederhana untuk pencarian data.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Buat script Python sederhana yang dapat mengambil data dari sebuah situs web atau API publik.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>8. Studi Kasus dan Proyek Akhir</h2>
+            <p><strong>Durasi:</strong> 1 Minggu</p>
+            <ul>
+                <li>Studi kasus nyata (diberikan oleh mentor).</li>
+                <li>Strategi penyelidikan dan pelaporan OSINT secara menyeluruh.</li>
+                <li>Pembuatan laporan OSINT profesional.</li>
+            </ul>
+            <div class="challenge">
+                <strong>Challenge:</strong>
+                <p>Pilih salah satu studi kasus (misalnya, investigasi domain, organisasi, atau media sosial), lalu buat laporan akhir yang mencakup semua langkah OSINT yang telah dipelajari.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 OSINT Training. All rights reserved.</p>
+    </footer>
+</body>
+</html>
