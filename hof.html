@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Willmet - HoF List</title>
+    <meta name="description" content="Don't talk too much, kids.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .achievements {
+            padding: 30px;
+        }
+
+        .achievement-item {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .achievement-item.bounty {
+            border-left-color: #e74c3c;
+        }
+
+        .achievement-item.hof {
+            border-left-color: #f39c12;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        }
+
+        .achievement-item.certificate {
+            border-left-color: #27ae60;
+        }
+
+        .achievement-item.progress {
+            border-left-color: #9b59b6;
+            background: #f4f1ff;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .organization {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 8px;
+        }
+
+        .details {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .badge.bounty {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .badge.certificate {
+            background: #27ae60;
+            color: white;
+        }
+
+        .badge.hof {
+            background: #f39c12;
+            color: white;
+        }
+
+        .badge.merchandise {
+            background: #3498db;
+            color: white;
+        }
+
+        .badge.severity {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .badge.progress {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .hof-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hof-link:hover {
+            text-decoration: underline;
+        }
+
+        .coming-soon {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            font-style: italic;
+            padding: 30px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .achievements {
+                padding: 20px;
+            }
+            
+            .achievement-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 Bug Bounty Achievements</h1>
+            <p>Hall of Fame & Security Research Accomplishments</p>
+        </div>
+
+        <div class="achievements">
+            <div class="achievement-item bounty">
+                <div class="date">19 Januari 2021</div>
+                <div class="organization">Private Bounty</div>
+                <div class="details">Voucher Belanja 1JT</div>
+                <div class="badges">
+                    <span class="badge bounty">Bounty</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">29 Januari 2024</div>
+                <div class="organization">Kompas.id</div>
+                <div class="details">Merchandise</div>
+                <div class="badges">
+                    <span class="badge merchandise">Merchandise</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">7 November 2024</div>
+                <div class="organization">Axioo Class Programs</div>
+                <div class="details">Certificate Appreciations & Merchandise</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                    <span class="badge merchandise">Merchandise</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">15 November 2024</div>
+                <div class="organization">PT. Nindya Karya</div>
+                <div class="details">Certificate Appreciations</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">4 Desember 2024</div>
+                <div class="organization">Airnav Indonesia</div>
+                <div class="details">Certificate Appreciations</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                </div>
+            </div>
+
+            <div class="achievement-item hof">
+                <div class="date">5 Desember 2024</div>
+                <div class="organization">PT. Transportasi Jakarta</div>
+                <div class="details">Certificate Appreciations & Hall of Fame</div>
+                <div class="details">
+                    <a href="https://csirt.transjakarta.co.id/white-hacker" target="_blank" class="hof-link">
+                        🔗 View Hall of Fame
+                    </a>
+                </div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                    <span class="badge hof">Hall of Fame</span>
+                </div>
+            </div>
+
+            <div class="achievement-item bounty">
+                <div class="date">10 Desember 2024</div>
+                <div class="organization">SIRCO</div>
+                <div class="details">Bounty | Low Severity | 100RB</div>
+                <div class="badges">
+                    <span class="badge bounty">Bounty</span>
+                    <span class="badge severity">Low Severity</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">12 Desember 2024</div>
+                <div class="organization">ITB</div>
+                <div class="details">Certificate Appreciations</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">10 Januari 2025</div>
+                <div class="organization">EVOS</div>
+                <div class="details">Certificate Appreciations, Jersey, $31 Rewards</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                    <span class="badge merchandise">Jersey</span>
+                    <span class="badge bounty">$31</span>
+                </div>
+            </div>
+
+            <div class="achievement-item progress">
+                <div class="date">10 Juni 2025</div>
+                <div class="organization">Binus (On Progress)</div>
+                <div class="details">Severity High</div>
+                <div class="badges">
+                    <span class="badge progress">On Progress</span>
+                    <span class="badge severity">High Severity</span>
+                </div>
+            </div>
+
+            <div class="achievement-item progress">
+                <div class="date">2024 (forgot the date)</div>
+                <div class="organization">Binus (On Progress)</div>
+                <div class="details">Severity Critical - rewards 100RB</div>
+                <div class="badges">
+                    <span class="badge progress">On Progress</span>
+                    <span class="badge severity">Critical Severity</span>
+                    <span class="badge bounty">100RB</span>
+                </div>
+            </div>
+
+            <div class="achievement-item bounty">
+                <div class="date">8 Mei 2025</div>
+                <div class="organization">Private Bug Bounty Programs</div>
+                <div class="details">$278</div>
+                <div class="badges">
+                    <span class="badge bounty">$278</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">9 Mei 2025</div>
+                <div class="organization">Private VDP</div>
+                <div class="details">Certificate Appreciations</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">19 Mei 2025</div>
+                <div class="organization">Astra Financials</div>
+                <div class="details">Certificate Appreciations & $31 Rewards</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                    <span class="badge bounty">$31</span>
+                </div>
+            </div>
+
+            <div class="achievement-item certificate">
+                <div class="date">10 Juli 2025</div>
+                <div class="organization">PT. Transportasi Jakarta</div>
+                <div class="details">Certificate Appreciations | Severity: High to Critical</div>
+                <div class="badges">
+                    <span class="badge certificate">Certificate</span>
+                    <span class="badge severity">High to Critical</span>
+                </div>
+            </div>
+
+            <div class="coming-soon">
+                🚀 Coming Soon :)
+            </div>
+        </div>
+    </div>
+</body>
+</html>
