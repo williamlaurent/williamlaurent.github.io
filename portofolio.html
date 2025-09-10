@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="bingbot" content="noindex">
+    <meta name="yandex" content="noindex">
+    <title>William M. Laurent - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+        .section:nth-child(5) { animation-delay: 0.4s; }
+        .section:nth-child(6) { animation-delay: 0.5s; }
+        .section:nth-child(7) { animation-delay: 0.6s; }
+        .section:nth-child(8) { animation-delay: 0.7s; }
+        .section:nth-child(9) { animation-delay: 0.8s; }
+
+        .section h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #764ba2;
+            border-radius: 2px;
+        }
+
+        .work-item, .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .work-item:hover, .education-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .work-item h3, .education-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .work-meta, .education-meta {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .work-description {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .interest-tag:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .achievements {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .achievements::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .achievements::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .achievements::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 3px;
+        }
+
+        .achievement-item {
+            background: rgba(118, 75, 162, 0.05);
+            border-left: 4px solid #764ba2;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-item:hover {
+            background: rgba(118, 75, 162, 0.1);
+            transform: translateX(5px);
+        }
+
+        .achievement-date {
+            font-weight: 600;
+            color: #764ba2;
+            font-size: 0.9rem;
+        }
+
+        .achievement-title {
+            font-weight: 500;
+            color: #2d3748;
+            margin: 5px 0;
+        }
+
+        .achievement-reward {
+            font-size: 0.85rem;
+            color: #667eea;
+            font-style: italic;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .language-item {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .language-level {
+            color: #667eea;
+            font-size: 0.9rem;
+        }
+
+        .toggle-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>WILLIAM MATTHEW LAURENT</h1>
+            <div class="contact-info">
+                <span>📍 Manado, Indonesia</span>
+                <span>📞 089631880502</span>
+                <span>✉️ williamlaurent404@gmail.com</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Profil</h2>
+            <p>Lulusan program studi S1 Teknik Informatika yang memiliki minat besar dalam bidang keamanan siber, khususnya pada Pentest (<i>Penetration Testing</i>) dan OSINT (<i>Open Source Intelligence</i>). Memiliki kemauan kuat untuk terus belajar dan berkembang, bertanggung jawab dalam setiap tugas yang diberikan, serta menjunjung tinggi kejujuran dalam setiap keputusan dan tindakan.</p>
+        </section>
+
+        <section class="section">
+            <h2>Pendidikan</h2>
+            <div class="education-item">
+                <h3>Universitas Katolik De La Salle Manado</h3>
+                <div class="education-meta">Program Studi Teknik Informatika | 2018-2024 | IPK: 3.17</div>
+                <div class="work-description">
+                    <strong>Mata Kuliah Relevan:</strong> Dasar Rekayasa Perangkat Lunak, Manajemen Proyek Perangkat Lunak, Proyek Perangkat Lunak, Technopreneur, Multi Platform, Sistem Basis Data, Data Mining, Keamanan Informasi.
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Pengalaman Kerja</h2>
+            
+            <div class="work-item">
+                <h3>Command Center Pemerintah Provinsi Sulawesi Utara</h3>
+                <div class="work-meta">IT Security Engineer (Contract) | Desember 2024 - Sekarang</div>
+                <div class="work-meta">IT Security Engineer (Contract/Outsourcing) | Augustus 2025 - Sekarang</div>
+                <div class="work-description">
+                    Pentesting dan vulnerability assessment sebelum aplikasi/website dideploy, kolaborasi dengan programmer dan tim IT untuk keamanan aplikasi/infrastruktur, monitoring SIEM dan analisis tren serangan, threat intelligence dan OSINT, pembuatan laporan keamanan bulanan, peningkatan awareness keamanan siber di lingkungan Pemprov Sulut.
+                </div>
+            </div>
+
+            <div class="work-item">
+                <h3>PT. Siggap Teknologi Internasional</h3>
+                <div class="work-meta">Penetration Tester (Freelance) | Mei 2025 - Sekarang</div>
+                <div class="work-description">
+                    Membantu melakukan penetration testing atau retesting berdasarkan scope project yang diberikan. Melakukan identifikasi kerentanan keamanan, analisis risiko, dan memberikan laporan lengkap dengan rekomendasi perbaikan keamanan.
+                </div>
+            </div>
+
+            <div class="work-item">
+                <h3>Optimaise Digital Agency</h3>
+                <div class="work-meta">Content Writer (Freelance) | Januari 2025 - Sekarang</div>
+                <div class="work-description">
+                    Menulis artikel cybersecurity berkualitas tinggi, melakukan riset konten mendalam, membuat konten yang engaging dan informatif, serta mengoptimalkan konten dengan prinsip E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) SEO untuk meningkatkan visibilitas dan kredibilitas konten. (<a href="https://optimaise.co.id/author/satulabs" target="_blank">https://optimaise.co.id/author/satulabs</a>)
+                </div>
+            </div>
+
+            <div class="work-item">
+                <h3>LPPM Universitas Katolik De La Salle Manado Indonesia</h3>
+                <div class="work-meta">Fullstack Developer (Magang/Kerja Praktik) | Februari 2022 - April 2022</div>
+                <div class="work-description">
+                    Merancang UI/UX, mengembangkan logika aplikasi (autentikasi, manajemen surat, pengajuan, persetujuan), merancang antarmuka dengan React, deployment ke server, serta dokumentasi.
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Penetration Testing</div>
+                <div class="skill-item">SQLMap & Burp Suite</div>
+                <div class="skill-item">OSINT</div>
+                <div class="skill-item">Exploit Research</div>
+                <div class="skill-item">Technical SEO</div>
+                <div class="skill-item">Keyword Research</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Minat</h2>
+            <div class="interests">
+                <span class="interest-tag">Penetration Tester</span>
+                <span class="interest-tag">OSINT Analyst</span>
+                <span class="interest-tag">Geo Intelligence Analyst</span>
+                <span class="interest-tag">Web Intelligence Analyst</span>
+                <span class="interest-tag">Cyber Awareness Specialist</span>
+                <span class="interest-tag">Digital Creator</span>
+                <span class="interest-tag">SEO Consultant</span>
+                <span class="interest-tag">Technical SEO Specialist</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Sertifikasi & Achievements</h2>
+            <button class="toggle-btn" onclick="toggleAchievements()">Tampilkan Semua Achievements</button>
+            <div class="achievements" id="achievements">
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Private Bounty – Indonesia Computer Store (Feb 2021)</div>
+                    <div class="achievement-title">Voucher Belanja Rp1.000.000</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">Astra Financials (19 Mei 2025)</div>
+                    <div class="achievement-title">Certificate & $31 Reward</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">Private VDP (9 Mei 2025)</div>
+                    <div class="achievement-title">Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">Private Bug Bounty - Indonesian Crypto Website (8 Mei 2025)</div>
+                    <div class="achievement-title">$278 USDT Reward</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">EVOS (10 Jan 2025)</div>
+                    <div class="achievement-title">Certificate, Jersey, & $31 Reward</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">PT Kompas Media Nusantara (Des 2024)</div>
+                    <div class="achievement-title">Merchandise (T-shirt, lanyard, tumbler, wallet)</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">ITB (31 Jan 2025)</div>
+                    <div class="achievement-title">Bronze Level - Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">ITB (18 Juli 2025)</div>
+                    <div class="achievement-title">Silver Level - Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Universitas Katolik De La Salle Manado (Des 2024)</div>
+                    <div class="achievement-title">Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">SIRCLO (10 Des 2024)</div>
+                    <div class="achievement-title">Bounty $6</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">PT. Transportasi Jakarta (5 Des 2024)</div>
+                    <div class="achievement-title">Certificate & Hall of Fame</div>
+                    <div class="achievement-reward"><a href="https://csirt.transjakarta.co.id/white-hacker/">https://csirt.transjakarta.co.id/white-hacker/</a></div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">PT. Transportasi Jakarta (7 Juli 2025)</div>
+                    <div class="achievement-title">Certificate of Appreciation</div>
+                    <div class="achievement-reward"><a href="https://csirt.transjakarta.co.id/white-hacker/">https://csirt.transjakarta.co.id/white-hacker/</a></div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Airnav Indonesia (4 Des 2024)</div>
+                    <div class="achievement-title">Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">PT. Nindya Karya (Nov 2024)</div>
+                    <div class="achievement-title">Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Private Bounty – Malaysia Online Store (Nov 2024)</div>
+                    <div class="achievement-title">Voucher Rp2.000.000</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Axioo Class Programs (Jan 2021)</div>
+                    <div class="achievement-title">Certificate & Merchandise</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Axioo Class Programs (Nov 2024)</div>
+                    <div class="achievement-title">Certificate of Appreciation</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Binus (Nov 2024 – On Progress)</div>
+                    <div class="achievement-title">Critical Severity</div>
+                </div>
+                <div class="achievement-item hidden-achievement" style="display: none;">
+                    <div class="achievement-date">Binus (Juni 2025 – On Progress)</div>
+                    <div class="achievement-title">Medium Severity</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Bahasa</h2>
+            <div class="languages-grid">
+                <div class="language-item">
+                    <div class="language-name">Bahasa Indonesia</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Bahasa Inggris</div>
+                    <div class="language-level">Basic-Intermediate</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Bahasa Tegal</div>
+                    <div class="language-level">Intermediate</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Bahasa Manado</div>
+                    <div class="language-level">Advance</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleAchievements() {
+            const hiddenAchievements = document.querySelectorAll('.hidden-achievement');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const isHidden = hiddenAchievements[0].style.display === 'none';
+            
+            hiddenAchievements.forEach(achievement => {
+                achievement.style.display = isHidden ? 'block' : 'none';
+            });
+            
+            toggleBtn.textContent = isHidden ? 'Sembunyikan Achievements' : 'Tampilkan Semua Achievements';
+        }
+
+        // Add smooth scroll animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
