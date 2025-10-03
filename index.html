@@ -1,56 +1,170 @@
 <!doctype html>
-<html amp lang="id-ID">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta http-equiv="content-language" content="id">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-    <title>Exploit Research Repo</title>
-    <meta name="description" content="CTF Player | Cybersecurity Enthuasiast | Bug Hunter | Exploit Research" />
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/1787/1787077.png">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/128/1787/1787077.png">
-    <link rel="apple-touch-icon-precomposed" href="https://cdn-icons-png.flaticon.com/128/1787/1787077.png">
-    <meta name="robots" content="noindex" />
-	
-	<!-- Styling -->
-	<style>
-        #title{
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-        #navbar,#time,#stuff,#other-stuff,#blog{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: left;
-            padding: 20px;
-        }
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ManadoCoder Repo</title>
+    <meta
+      name="description"
+      content="Kumpulan repository GitHub ManadoCoder: Bash, Python, PHP, dan lainnya."
+    />
+    <style>
+      :root {
+        --maxw: 800px;
+        --gap: 1rem;
+        --gap-lg: 1.5rem;
+        --border: #e5e5e5;
+        --text: #111111;
+        --bg: #ffffff;
+      }
+
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      a:hover {
+        opacity: 0.8;
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      header {
+        border-bottom: 1px solid var(--border);
+        margin-bottom: var(--gap-lg);
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+        margin: 0 0 0.5rem 0;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      p.lead {
+        margin: 0 0 1.25rem 0;
+        opacity: 0.9;
+      }
+
+      section {
+        padding-top: var(--gap-lg);
+        margin-top: var(--gap-lg);
+        border-top: 1px solid var(--border);
+      }
+
+      h2 {
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 0.75rem 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.25rem; /* keep bullets but minimal */
+      }
+
+      li + li {
+        margin-top: 0.5rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>ManadoCoder Repo</h1>
+        <p class="lead">Hanya repo milik manadocoder.</p>
+      </header>
 
-    <!-- 
-        Some stuff, here the stuff. 
-        Hopefully it's useful, lol.
-    -->
-    
-    <p id="stuff">
-    <b>Stuff:</b><br>
-    7 Oct 2023 - <a href="encrypt-hash.py">Encrypt Hash with Python (MD5,SHA1 and Base64)</a><br>
-    7 Oct 2023 - <a href="shortlink-lookup.zip">Shortlink Lookup with Python</a><br>
-    7 Oct 2023 - <a href="password-random.py">Userpass Generator with Python</a><br>
-    30 Oct 2023 - <a href="osint62.html">OSINT +62 Phone Number</a><br>
-    2 Feb 2024 - <a href="nuxt.html">Nuxt Missconfiguration</a><br>
-    16 Nov 2024 - <a href="https://github.com/williamlaurent/mobreverse/tree/main">Mobreverse</a>
-    </p>
+      <main>
+        <section aria-labelledby="bash">
+          <h2 id="bash">BASH</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/williamlaurent/ip-log-parser" target="_blank" rel="noopener noreferrer">IP Log Parser Recon</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/anti-netcut" target="_blank" rel="noopener noreferrer">Anti Netcut / Anti ARP Spoofing</a>
+            </li>
+          </ul>
+        </section>
 
-    <p id="other-stuff">
-    <b>Other Stuff:</b><br>
-    I will put some other stuff soon.
-    </p>
-    
-    <p id="time"><b>Update [6 Desember 2024]</p></b>
-	<a href="index.html" target="_blank">Home</a> | <a href="#" target="_blank">About</a> | <a href="#" target="_blank">HoF</a>
-    </p> -->
+        <section aria-labelledby="ezine">
+          <h2 id="ezine">EZINE</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/williamlaurent/osint-icp-ezine" target="_blank" rel="noopener noreferrer">OSINT Ezine</a>
+            </li>
+          </ul>
+        </section>
 
-</body>
+        <section aria-labelledby="php">
+          <h2 id="php">PHP</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/williamlaurent/kecoak-stealth" target="_blank" rel="noopener noreferrer">Kecoak Webshell</a>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="python">
+          <h2 id="python">PYTHON</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/williamlaurent/mobreverse" target="_blank" rel="noopener noreferrer">Mob Reverse (APK Recon)</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/broken" target="_blank" rel="noopener noreferrer">Broken Link Checker</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/endgrab" target="_blank" rel="noopener noreferrer">JS Endpoint Grabber</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/exds" target="_blank" rel="noopener noreferrer">.DS_Store Extractor</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/f-uzz" target="_blank" rel="noopener noreferrer">Fuzzing Juicy Information from a website</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/m-put" target="_blank" rel="noopener noreferrer">PUT Method Arbitrary File Upload</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/arduinoob" target="_blank" rel="noopener noreferrer">Arduino Basic Pentest</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/Shortlink-Checker" target="_blank" rel="noopener noreferrer">Shortlink Checker</a>
+            </li>
+            <li>
+              <a href="https://github.com/williamlaurent/bin-lookup" target="_blank" rel="noopener noreferrer">BIN Lookup</a>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="etc">
+          <h2 id="etc">ETC</h2>
+          <ul>
+            <li>
+              <a href="https://github.com/williamlaurent/frp-bypass" target="_blank" rel="noopener noreferrer">FRP Bypass for All Android</a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
